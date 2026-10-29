@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'JJ';
+  src: url('typefaces/JJannon-Regular-Trial.otf') format('woff2'),
+       url('./fonts/MyCustomFont-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JJ-I';
+  src: url('typefaces/JJannon-Italic-Trial.otf') format('woff2'),
+       url('./fonts/MyCustomFont-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000000;
+}
+
+
+header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+h1, nav a {
+  margin: 0;
+
+  font-size: 1.5rem;
+  font-weight: 100;
+  padding: 2px 4px;
+  color: #ffffff;
+  font-family: 'JJ';
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
+
+h1:hover{
+  font-family: 'JJ-I';
+}
+a:hover{
+  font-family: 'JJ-I';
+}
+
+.about{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: rgb(255, 255, 255);
+  z-index: 10000;
+  font-size: 1.5rem;
+  font-family: 'JJ';
+  padding: 0;
+  margin: 0;
+  width: 60%;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 90px;
+  margin-top: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+.tile img {
+  display: block;
+  width: 80px;
+  height: 110px;
+  background: #ccc;
+  opacity: .5;
+}
+
+.tile:hover {
+  z-index: 10;       
+ 
+}
+
+.tile:hover img {
+    opacity: 1;    
+}
+
+.info{
+  margin-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1.5rem;
+  font-family: 'JJ';
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header { flex-direction: column; }
+}
+
+
+
+.tile span {
+  display: block;
+  width: 80px;    
+  margin-top: 4px;
+  font-family: 'JJ', Arial, sans-serif;
+  font-size: 0.7rem;
+  line-height: 1;
+  text-align: left;
+  color: #ffffff;
+  opacity: .5;
+  overflow-wrap: anywhere;
+}
+
+.tile:hover span {
+  opacity: 1;
+}
+

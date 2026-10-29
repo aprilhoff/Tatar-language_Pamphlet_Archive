@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tatar-language Pamphlet Archive</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1><a href="index.html">Tatar-language Pamphlet Archive</a></h1>
+  <nav>
+    <a href="info.html">Info</a>
+  </nav>
+</header>
+<main class="app">
+
+  <p id="status" aria-live="polite">Loading…</p>
+
+  <div class="scene" id="scene">
+    <div class="stack" id="stack">
+      <section class="layer layer-image" data-label="Image">
+        <img id="preview" src="" alt="" draggable="false">
+      </section>
+      <section class="layer layer-original" id="originalLayer" data-label="Original text"></section>
+      <section class="layer layer-translated" id="translatedLayer" data-label="Translated text"></section>
+    </div>
+  </div>
+
+<div class="info-bar">
+<button id="prevButton" class="nav-arrow nav-prev" type="button" aria-label="Previous image">←</button>
+<button id="nextButton" class="nav-arrow nav-next" type="button" aria-label="Next image">→</button>
+  <p id="title"></p>
+</div>
+
+<div class="view-bar" id="viewControls">
+  <label><input type="checkbox" id="toggleImage" checked> Image</label>
+  <label><input type="checkbox" id="toggleOriginal" checked> Original Text</label>
+  <label><input type="checkbox" id="toggleTranslated" checked> Translated Text</label>
+  <input type="range" id="depthSlider" min="0" max="100" value="80">
+</div>
+
+<div class="controlshover" tabindex="0">
+  <p>Controls?</p>
+  <div class="controls-tip">
+    <ul>
+      <li><strong>Drag</strong> to rotate the layers</li>
+      <li><strong>Scroll</strong> to zoom in and out</li>
+      <li><strong>Double-click</strong> to reset the view</li>
+      <li><strong>← →</strong> arrow keys for previous / next</li>
+      <li>Use the checkboxes to hide a layer, and the slider to fade the text boxes</li>
+    </ul>
+  </div>
+</div>
+</main>
+
+<script src="viewer.js"></script>
+</body>
+</html>
